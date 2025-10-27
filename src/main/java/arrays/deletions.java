@@ -1,56 +1,22 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class deletions {
     public static void main(String[] args) {
-        int[] array = new int[10];
-        int len = array.length;
 
-        for(int i=0; i<10; i++){
-            array[i] = i;
+        int[] arr = new int[]{1, 1, 2, 3, 4, 5};
+
+        System.out.println(Arrays.toString(arr));
+        System.out.println("deleting 1....");
+
+        int pos = 1;
+
+        for(int i=pos; i<arr.length-1; i++){
+            arr[i] = arr[i+1];
         }
 
-        System.out.println("original array");
-
-        for(int i=0; i<len; i++){
-            System.out.print(array[i] + " ");
-        }
-
-        System.out.println();
-        System.out.println("deleting one element at the end of the array");
-
-        len--;
-
-        for(int i=0; i<len; i++){
-            System.out.print(array[i] + " ");
-        }
-
-        System.out.println();
-        System.out.println("deleting one element at the start of the array");
-
-        for(int i=1; i<len; i++){
-            array[i-1] = array[i];
-        }
-
-        len--;
-
-        for(int i=0; i<len; i++){
-            System.out.print(array[i] + " ");
-        }
-
-        System.out.println();
-        System.out.println("deleting one element at somewhere in the middle of the array");
-
-        for(int i=3; i<len; i++){
-            array[i-1] = array[i];
-        }
-
-        len--;
-
-        for(int i=0; i<len; i++){
-            System.out.print(array[i] + " ");
-        }
-
-
+        System.out.println(Arrays.toString(arr));
 
     }
 }
