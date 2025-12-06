@@ -1,5 +1,7 @@
 package strings;
 
+import java.util.Arrays;
+
 public class lecture5 {
     public static void main(String[] args) {
         StringBuilder xoxo = new StringBuilder();
@@ -12,5 +14,17 @@ public class lecture5 {
         System.out.println(xoxo);
         System.out.println(xoxo.reverse());
 
+        String name = "hehehehehe";
+        System.out.println(Arrays.toString(name.toCharArray()));
+
+        String var = "HAHAHAHAH";
+        System.out.println(var.toLowerCase());
+
+        String word = "palindrome";
+        System.out.println(word.indexOf("o"));
+        System.out.println(word.lastIndexOf("e"));
+
+        String sen = "hello, my name is devaki";
+        System.out.println(Arrays.toString(sen.split(" ")));
     }
 }
